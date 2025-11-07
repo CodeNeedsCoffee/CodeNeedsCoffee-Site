@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Card, CardBody, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, Switch } from "@heroui/react";
+import { Avatar, Button, Card, CardBody, CardHeader, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, Switch } from "@heroui/react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,23 +25,22 @@ function App() {
       {/* Navbar */}
       <Navbar maxWidth="xl" position="static" className="shadow-sm bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md">
         <NavbarBrand>
-          <span className="font-bold text-xl text-indigo-600 dark:text-indigo-400">MyHeroApp</span>
+          <span className="font-bold text-xl text-indigo-600 dark:text-indigo-400">CodeNeedsCoffee</span>
         </NavbarBrand>
         <NavbarContent justify="end">
           <NavbarItem>
-            <a href="#features" className="text-gray-700 transition-colors">
-              Features
+            <a href="https://github.com/CodeNeedsCoffee" className="text-gray-700 transition-colors">
+              GitHub
             </a>
           </NavbarItem>
           <NavbarItem>
-            <a href="#about" className="transition-colors">
-              About
-            </a>
-          </NavbarItem>
-          <NavbarItem>
-            <Button color="primary" variant="flat">
-              Get Started
-            </Button>
+            <Link
+              href="https://www.linkedin.com/in/codeneedscoffee"
+            >
+              <Button color="primary" variant="flat">
+                LinkedIn
+              </Button>
+            </Link>
           </NavbarItem>
 
           {/* 🌗 Theme Switch */}
@@ -60,64 +59,82 @@ function App() {
       </Navbar>
 
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-16 transition-colors duration-300">
-        <h1 className="text-5xl font-extrabold mb-6">
-          Build Beautiful Interfaces with <span className="text-indigo-600 dark:text-indigo-400">HeroUI</span>
+      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-20">
+        <Avatar
+          className="w-50 h-50 mb-10 text-large"
+          src="/favicon.svg"
+        />
+        <h1 className="text-5xl font-bold mb-4">
+          Hey, I'm <span className="text-primary">Evan Templin</span>
         </h1>
-        <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-2xl mb-8">
-          A simple, elegant, and fast UI built on React, powered by Vite, and deployed on Cloudflare Workers.
+        <p className="text-lg text-default-500 max-w-2xl mb-8">
+          I'm a <span className="font-semibold">Developer at Crestwood Associates</span> who builds
+          custom solutions for Acumatica and web applications in Node.js and React.
+          I'm passionate about coffee, automation, creative coding, and using technology to help people.
         </p>
         <div className="flex gap-4">
           <Link
             href="https://github.com/CodeNeedsCoffee/CodeNeedsCoffee-Site"
-            isExternal
           >
-            <Button color="primary" size="lg">
-              Explore
+            <Button
+              variant="solid"
+              color="primary"
+            >
+              Explore My Code
             </Button>
           </Link>
-          <Button variant="bordered" color="primary" size="lg" onPress={() => setCount(count + 1)}>
-            Clicks: {count}
+          <Button
+            as="a"
+            href="mailto:codeneedscoffee@gmail.com"
+            variant="bordered"
+          >
+            Contact Me
           </Button>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-16
-        bg-background text-foreground
-        transition-colors duration-300"
-      >
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-10">Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Lightning Fast",
-                desc: "Built with Vite and optimized for Cloudflare Workers for instant load times.",
-              },
-              {
-                title: "Responsive by Default",
-                desc: "Every component adapts beautifully to any screen size or device.",
-              },
-              {
-                title: "Customizable",
-                desc: "Easily theme components with Tailwind and HeroUI configuration.",
-              },
-            ].map((f, i) => (
-              <Card key={i} shadow="sm" className="border border-gray-200 dark:border-zinc-700 transition-colors">
-                <CardBody>
-                  <h3 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">{f.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{f.desc}</p>
-                </CardBody>
-              </Card>
-            ))}
-          </div>
+      {/* Skills / Features Section */}
+      <section className="py-16 px-6 bg-muted/40">
+        <h2 className="text-3xl font-bold text-center mb-10">What I Work With</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <Card>
+            <CardHeader>
+              <h3 className="text-xl font-semibold text-primary">Full-Stack Development</h3>
+            </CardHeader>
+            <CardBody>
+              <p>
+                Building scalable apps using Node.js, React, TypeScript, and modern frameworks.
+              </p>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardHeader>
+              <h3 className="text-xl font-semibold text-primary">Acumatica Customization</h3>
+            </CardHeader>
+            <CardBody>
+              <p>
+                Extending ERP capabilities with C#, automation scripts, and API integrations.
+              </p>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardHeader>
+              <h3 className="text-xl font-semibold text-primary">Home Automation & IoT</h3>
+            </CardHeader>
+            <CardBody>
+              <p>
+                Experimenting with smart home systems and custom integrations using Home Assistant.
+              </p>
+            </CardBody>
+          </Card>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-6 border-t border-gray-200 dark:border-zinc-800 text-center text-gray-500 dark:text-gray-400 text-sm">
-        <p>© {new Date().getFullYear()} MyHeroApp. Built with ❤️ using HeroUI, Vite, and Cloudflare Workers.</p>
+      <footer className="py-6 text-center border-t border-default-100">
+        <p className="text-sm text-default-500">
+          © {new Date().getFullYear()} Evan Templin — Built with ❤️ using Coffee and Code (HeroUI, React, and Vite).
+        </p>
       </footer>
     </div>
   );
