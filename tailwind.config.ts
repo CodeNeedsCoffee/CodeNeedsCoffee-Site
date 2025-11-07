@@ -1,22 +1,21 @@
-import { heroui } from "@heroui/react"; // or if plugin separately maybe from @heroui/theme/plugin
+import { heroui } from "@heroui/react";
 
 export default {
-  darkMode: "class", // so theme switching uses class
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
-      // any additional tailwind customizations
+      // any additional Tailwind customizations
     },
   },
   plugins: [
     heroui({
-      // plugin options
-      prefix: "heroui",          // default prefix
-      addCommonColors: false,    // enable if you want tailwind default colors replaced
+      prefix: "heroui",
+      addCommonColors: false,
       defaultTheme: "light",
       defaultExtendTheme: "dark",
       themes: {
@@ -34,9 +33,9 @@ export default {
               800: "#0F197B",
               900: "#040533",
             },
-            // define secondary, success, warning, danger etc.
             background: "#FFFFFF",
             foreground: "#111111",
+            // other semantic colors
           },
           layout: {
             radius: {
@@ -65,9 +64,9 @@ export default {
               800: "#0D0D66",
               900: "#060633",
             },
-            // other semantic colors
             background: "#111111",
             foreground: "#EAEAEA",
+            // other semantic colors
           },
           layout: {
             radius: {

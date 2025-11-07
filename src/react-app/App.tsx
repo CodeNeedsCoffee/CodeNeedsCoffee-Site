@@ -21,12 +21,12 @@ function App() {
         </NavbarBrand>
         <NavbarContent justify="end">
           <NavbarItem>
-            <a href="#features" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <a href="#features" className="text-gray-700 transition-colors">
               Features
             </a>
           </NavbarItem>
           <NavbarItem>
-            <a href="#about" className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+            <a href="#about" className="transition-colors">
               About
             </a>
           </NavbarItem>
@@ -52,8 +52,8 @@ function App() {
       </Navbar>
 
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-16">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-gray-900 dark:text-gray-100">
+      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-16 transition-colors duration-300">
+        <h1 className="text-5xl font-extrabold mb-6">
           Build Beautiful Interfaces with <span className="text-indigo-600 dark:text-indigo-400">HeroUI</span>
         </h1>
         <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-2xl mb-8">
@@ -63,14 +63,17 @@ function App() {
           <Button color="primary" size="lg">
             Explore
           </Button>
-          <Button variant="bordered" size="lg" onPress={() => setCount(count + 1)}>
+          <Button variant="bordered" color="primary" size="lg" onPress={() => setCount(count + 1)}>
             Clicks: {count}
           </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gray-50 dark:bg-zinc-900 transition-colors">
+      <section className="flex-1 flex flex-col justify-center items-center text-center px-6 py-16
+        bg-background text-foreground
+        transition-colors duration-300"
+      >
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-10">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -14,7 +14,7 @@ export function ThemeWrapper({ children }: ThemeWrapperProps) {
 
   return (
     <HeroUIProvider>
-      <main className={`${theme} text-foreground bg-background min-h-screen`}>
+      <main className="min-h-screen bg-background text-foreground transition-colors duration-300">
         {/* Pass the toggle function via React context or prop if needed */}
         {React.cloneElement(children, { toggleTheme, theme })}
       </main>
