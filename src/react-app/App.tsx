@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button, Card, CardBody, Navbar, NavbarBrand, NavbarContent, NavbarItem, Switch } from "@heroui/react";
+import { Button, Card, CardBody, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, Switch } from "@heroui/react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,10 +7,18 @@ function App() {
 
   // Apply the theme class directly to <html> or to your app container
   useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle("dark", isDark);
-    root.classList.toggle("light", !isDark);
-  }, [isDark]);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setIsDark(prefersDark);
+    document.documentElement.classList.toggle("dark", prefersDark);
+    document.documentElement.classList.toggle("light", !prefersDark);
+  }, []);
+
+  // Handle toggle switch
+  const toggleTheme = (checked: boolean) => {
+    setIsDark(checked);
+    document.documentElement.classList.toggle("dark", checked);
+    document.documentElement.classList.toggle("light", !checked);
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-300">
@@ -40,7 +48,7 @@ function App() {
           <NavbarItem>
             <Switch
               isSelected={isDark}
-              onValueChange={setIsDark}
+              onValueChange={toggleTheme}
               aria-label="Toggle theme"
               color="primary"
               size="sm"
@@ -60,9 +68,14 @@ function App() {
           A simple, elegant, and fast UI built on React, powered by Vite, and deployed on Cloudflare Workers.
         </p>
         <div className="flex gap-4">
-          <Button color="primary" size="lg">
-            Explore
-          </Button>
+          <Link
+            href="https://github.com/CodeNeedsCoffee/CodeNeedsCoffee-Site"
+            isExternal
+          >
+            <Button color="primary" size="lg">
+              Explore
+            </Button>
+          </Link>
           <Button variant="bordered" color="primary" size="lg" onPress={() => setCount(count + 1)}>
             Clicks: {count}
           </Button>
