@@ -1,46 +1,45 @@
-# React + Vite + Hono + Cloudflare Workers
+# ☕ CodeNeedsCoffee — Developer Portfolio
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/vite-react-template)
+Welcome to the **CodeNeedsCoffee** site!
+This project is my personal developer portfolio and playground — built with **React**, **Vite**, **HeroUI**, and **TailwindCSS**. It serves as both a showcase of my work and a testing ground for new design and UI ideas.
 
-This template provides a minimal setup for building a React application with TypeScript and Vite, designed to run on Cloudflare Workers. It features hot module replacement, ESLint integration, and the flexibility of Workers deployments.
+The site highlights my projects, skills, and ongoing experiments in modern web development. You can explore the codebase, use it as inspiration, or fork it to build your own developer portfolio.
 
-![React + TypeScript + Vite + Cloudflare Workers](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public)
+---
 
-<!-- dash-content-start -->
+## 🚀 Features
 
-🚀 Supercharge your web development with this powerful stack:
+* **HeroUI + Tailwind** styling for fast, modern, and responsive design
+* **Dark/Light mode** toggle synced to your system preferences
+* **Optimized with Vite** for lightning-fast builds
+* **Deployed via Cloudflare Pages** for speed and reliability
+* Clean, minimal developer-focused design
 
-- [**React**](https://react.dev/) - A modern UI library for building interactive interfaces
-- [**Vite**](https://vite.dev/) - Lightning-fast build tooling and development server
-- [**Hono**](https://hono.dev/) - Ultralight, modern backend framework
-- [**Cloudflare Workers**](https://developers.cloudflare.com/workers/) - Edge computing platform for global deployment
+---
 
-### ✨ Key Features
+## 🛠️ Tech Stack
 
-- 🔥 Hot Module Replacement (HMR) for rapid development
-- 📦 TypeScript support out of the box
-- 🛠️ ESLint configuration included
-- ⚡ Zero-config deployment to Cloudflare's global network
-- 🎯 API routes with Hono's elegant routing
-- 🔄 Full-stack development setup
-- 🔎 Built-in Observability to monitor your Worker
+* **Framework:** React + TypeScript
+* **UI Components:** [HeroUI](https://www.heroui.com/)
+* **Styling:** Tailwind CSS
+* **Build Tool:** Vite
+* **Deployment:** Cloudflare Pages
 
-Get started in minutes with local development or deploy directly via the Cloudflare dashboard. Perfect for building modern, performant web applications at the edge.
+---
 
-<!-- dash-content-end -->
+## ⚙️ Installation
 
-## Getting Started
-
-To start a new project with this template, run:
+Clone the repository:
 
 ```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/vite-react-template
+git clone https://github.com/CodeNeedsCoffee/CodeNeedsCoffee-Site.git
 ```
 
-A live deployment of this template is available at:
-[https://react-vite-template.templates.workers.dev](https://react-vite-template.templates.workers.dev)
+Navigate to the project directory:
 
-## Development
+```bash
+cd CodeNeedsCoffee-Site
+```
 
 Install dependencies:
 
@@ -48,15 +47,21 @@ Install dependencies:
 npm install
 ```
 
-Start the development server with:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at [http://localhost:5173](http://localhost:5173).
+Open your browser and visit:
 
-## Production
+```
+http://localhost:5173
+```
+
+---
+
+## 💾 Production
 
 Build your project for production:
 
@@ -82,9 +87,47 @@ Monitor your workers:
 npx wrangler tail
 ```
 
-## Additional Resources
 
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Documentation](https://reactjs.org/)
-- [Hono Documentation](https://hono.dev/)
+## 🌗 Theme
+
+This project includes a fully functional light/dark theme switcher powered by Tailwind’s `darkMode: "class"` configuration and HeroUI’s color tokens.
+
+Your theme preference is automatically synced with your system setting on initial load.
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── react-app/
+│   ├── App.tsx              # Main React component
+│   ├── hooks/useTheme.ts    # Theme management hook
+│   ├── ThemeWrapper.tsx     # Theme context provider
+│   └── main.tsx             # Entry point
+├── assets/                  # Static images and logos
+└── App.css                  # Global styles
+```
+
+---
+
+## 💻 Developer
+
+**👋 Evan “CodeNeedsCoffee” Templin**
+Developer • Home Automation Enthusiast • Builder of Helpful Tools
+
+* 🌐 [Website](https://github.com/CodeNeedsCoffee/CodeNeedsCoffee-Site)
+* 🧠 Focus: Acumatica customization, Node.js, and web automation
+* ☕ Motto: *Code runs on coffee.*
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+### 💡 Contributing
+
+If you’d like to make suggestions, improvements, or just share feedback, feel free to open an issue or submit a PR. I love connecting with other developers who enjoy clean, meaningful code.
