@@ -1,6 +1,6 @@
-# ☕ CodeNeedsCoffee — Developer Portfolio
+# ☕ CodeNeedsCoffee Website Codebase
 
-Welcome to the **CodeNeedsCoffee** site!
+Welcome to the **CodeNeedsCoffee** site codebase!
 This project is my personal developer portfolio and playground — built with **React**, **Vite**, **HeroUI**, and **TailwindCSS**. It serves as both a showcase of my work and a testing ground for new design and UI ideas.
 
 The site highlights my projects, skills, and ongoing experiments in modern web development. You can explore the codebase, use it as inspiration, or fork it to build your own developer portfolio.
@@ -20,10 +20,10 @@ The site highlights my projects, skills, and ongoing experiments in modern web d
 ## 🛠️ Tech Stack
 
 * **Framework:** React + TypeScript
-* **UI Components:** [HeroUI](https://www.heroui.com/)
-* **Styling:** Tailwind CSS
-* **Build Tool:** Vite
-* **Deployment:** Cloudflare Pages
+* **UI Components:** [HeroUI](https://www.heroui.com)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com)
+* **Build Tool:** [Vite](https://vite.dev)
+* **Deployment:** [Cloudflare Workers](https://github.com/cloudflare/templates/tree/v5.6.1/vite-react-template)
 
 ---
 
@@ -113,10 +113,10 @@ src/
 
 ## 💻 Developer
 
-**👋 Evan “CodeNeedsCoffee” Templin**
+**👋 Evan Templin (CodeNeedsCoffee)**
 Developer • Home Automation Enthusiast • Builder of Helpful Tools
 
-* 🌐 [Website](https://github.com/CodeNeedsCoffee/CodeNeedsCoffee-Site)
+* 🌐 [Website](https://codeneedscoffee.com)
 * 🧠 Focus: Acumatica customization, Node.js, and web automation
 * ☕ Motto: *Code runs on coffee.*
 
